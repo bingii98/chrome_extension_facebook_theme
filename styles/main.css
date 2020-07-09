@@ -1,0 +1,252 @@
+.actions {
+    display: flex;
+}
+
+.actions .button-group {
+    display: inline-flex;
+    margin-left: 15px;
+}
+
+.button-group .btn {
+    height: fit-content;
+    margin: auto 5px; 
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    outline: none;
+    transition: color .15s ease-in-out,
+        background-color .15s ease-in-out,
+        border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out;
+}
+
+.btn {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover {
+    text-decoration: none;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: #1e7e34;
+    border-color: #1c7430;
+}
+
+.btn-success:hover {
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-success:focus {
+    box-shadow: 0 0 0 0.2rem rgba(72,180,97,.5);
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: #bd2130;
+    border-color: #b21f2d;
+}
+
+.btn-danger:hover {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-danger:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220,53,69,.5);
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+    color: #fff;
+    background-color: #0062cc;
+    border-color: #005cbf;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(38,143,255,.5);
+}
+
+#myTimeLine {
+    width: 100%;
+    height: 100%;
+    z-index: 99999999;
+    background: #fff;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-left: auto;
+    border-left: 1px solid #ddebd8;
+    padding: 20px 0;
+    box-sizing: border-box;
+    transition: all 0.2;
+}
+
+#load-more {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    position: fixed;
+    z-index: 999;
+    background: #65a200;
+    color: #fff;
+    line-height: inherit;
+    border-radius: 20px;
+    margin-top: -10px;
+    box-shadow: 1px 1px 5px #0000007a;
+    width: 155px;
+    height: 35px !important;
+    line-height: 35px;
+}
+
+#load-more.loading-message {
+    background: #fff;
+    color: #212529;
+}
+
+#my-message-content ._message[from-me="false"] {
+    background: #ddebd8;
+}
+
+#_timeLine div.resize {
+    opacity: 0;
+    width: 0%;
+    transition: all 0.2;
+}
+
+#message-setting {
+    margin-left: auto;
+    display: flex;
+}
+
+#message-setting li {
+    padding: 0px 10px;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.rg-ckbox:not(:checked),
+.rg-ckbox:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+.rg-ckbox:not(:checked) + label,
+.rg-ckbox:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+.rg-ckbox:not(:checked) + label:before,
+.rg-ckbox:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.0em; height: 1.0em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+
+.rg-ckbox:not(:checked) + label:after,
+.rg-ckbox:checked + label:after {
+  content: '\2713\0020';
+  position: absolute;
+  top: .12em;
+  left: .15em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #09ad7e;
+  transition: all .2s;
+  font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+}
+
+.rg-ckbox:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.rg-ckbox:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.rg-ckbox:checked + label::before {
+    border-color: #65a200;
+}
+
+.rg-ckbox:disabled:not(:checked) + label:before,
+.rg-ckbox:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+
+.rg-ckbox:disabled:checked + label:after {
+  color: #999;
+}
+
+.rg-ckbox:disabled + label {
+  color: #aaa;
+}
+
+.rg-ckbox + label {
+    font-weight: 600;
+    border-radius: 2px;
+    padding: 1px 10px 1px 25px;
+    text-transform: uppercase;
+}
+
+.rg-ckbox:checked + label {
+    background: #65a200;
+    color: #fff;
+}

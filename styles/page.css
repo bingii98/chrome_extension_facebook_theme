@@ -1,0 +1,520 @@
+body {
+    font-size: 12px;
+    color: #414047;
+    background: #f5f7fb;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a[href = ""] {
+    display: none;
+}
+
+.copy-on-click,
+.copy-text {
+    cursor: pointer;
+}
+
+.copy-tooltip {
+    position: fixed;
+    z-index: 99999;
+    background: #1e7e34;
+    padding: 5px 8px;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 10px;
+    transition: all linear .3s;
+}
+
+.tooltip-fade-out {
+    opacity: 0;
+    transform: translateY(-200%);
+}
+
+.form-control {
+    font-size: 12px;
+    border: none;
+    background: #fff !important;
+    color: #7e8288;
+    outline: none !important;
+    box-shadow: 0px 0px 1px #0000001f !important;
+    font-weight: 500;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #0009;
+}
+
+.btn {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.wrapper {
+    width: 650px;
+    height: 600px;
+    background: #f5f7fb;
+}
+
+.wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar {
+    background: #f5f7fb !important;
+    position: fixed;
+    width: calc(100% - 60px);
+    height: 65px;
+    right: 0;
+    padding: 8px 18px;
+    z-index: 999;
+}
+
+.navbar .navbar-brand {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.sidebar,
+.content {
+    float: left;
+}
+
+.sidebar {
+    width: fit-content;
+    background: #fff;
+    position: fixed;
+    height: 100%;
+}
+
+.content {
+    width: 80%;
+    padding: 0px 5%;
+    position: relative;
+    left: 60px;
+    height: 435px;
+    background: #f5f7fb;
+    margin-top: 65px;
+    box-sizing: content-box;
+    height: calc(100% - 65px);
+}
+
+#clear-all {
+    margin-left: auto;
+    display: block;
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid #eaeaea;
+    box-shadow: none !important;
+}
+
+#clear-all i {
+    vertical-align: middle;
+    color: #818694;
+    transition: all .3s;
+}
+
+#clear-all i:hover {
+    color: inherit;
+}
+
+.list-group {
+    height: fit-content;
+    width: fit-content;
+    margin-top: 50px;
+}
+
+.list-group .list-group-item {
+    width: fit-content;
+    border: none;
+    background: none !important;
+    padding: 15px 10px;
+}
+
+.list-group .list-group-item span {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: #eff1f5;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    color: #818694;
+}
+
+.list-group .list-group-item.active span {
+    background: #47abf2;
+    color: #fff;
+    box-shadow: 0px 5px 10px #47abf275;
+}
+
+.list-group img {
+    height: 30px;
+    position: absolute;
+    border-radius: 35px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-52%, -52%);
+}
+
+#tk-current {
+    margin-bottom: 20px;
+    position: relative;
+    background: #fff;
+    box-shadow: 0px 0px 1px #0000001f !important;
+    border-radius: 5px;
+}
+
+#tk-current .tk-overview {
+    border-bottom: 1px solid #f0f3f7;
+    padding: 15px 20px;
+}
+
+.tk-overview .tk-title {
+    width: fit-content;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+}
+
+.tk-overview .tk-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    width: 92%;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #9ca9bd;
+}
+
+#tk-current .tk-info {
+    display: flex;
+    padding: 15px 20px 0 20px;
+}
+
+#tk-current .tk-mark {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 32px;
+    height: 40px;
+    background: #f6424a;
+    text-align: center;
+    display: table;
+    border-radius: 0 0 15px 15px;
+}
+
+#tk-current .tk-actions {
+    width: fit-content;
+    margin-left: auto;
+    padding: 0 15px 15px;
+}
+
+#tk-current .tk-actions .btn {
+    border-radius: 20px;
+    margin-left: auto;
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+    line-height: 25px;
+}
+
+.tk-actions .btn i {
+    font-size: 14px;
+}
+
+
+.tk-mark i {
+    display: table-cell;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 20px;
+}
+
+.tk-info .left-side,
+.tk-info .right-side {
+    width: 50%;
+}
+
+.tk-info .right-side {
+    margin-left: 5%;
+}
+
+.tk-row .field-value {
+    float: right;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    width: 50%;
+    padding-left: 15px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.tk-row .field-value:empty::before {
+    content: '-';
+}
+
+.tk-row .field-title {
+    color: #414047ab;
+}
+
+.tk-progress {
+    margin-bottom: 1rem;
+}
+
+.tk-progress .progress {
+    height: 9px;
+    font-size: 9px;
+    margin-top: 5px;
+}
+
+.tk-activity {
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 2px solid #f6424a;
+    width: fit-content;
+    padding: 5px 0;
+    margin-bottom: 15px;
+}
+
+#tk-list {
+    overflow: auto;
+    max-height: 185px;
+    
+}
+
+.scroll-mark {
+    position: relative;
+}
+
+.scroll-mark::before {
+    content: '';
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    
+}
+
+.scroll-mark::before {
+    bottom: -5px;
+    background: linear-gradient(#00000000, #f5f7fb, #f5f7fb);
+}
+
+#tk-list::-webkit-scrollbar {
+    display: none;
+}
+
+.tk-item {
+    display: flex;
+    margin-bottom: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 1px #0000001f !important;
+    border-radius: 5px;
+}
+
+.tk-item .tk-item-action {
+    display: block;
+    min-width: 30px;
+    margin-left: auto;
+}
+
+.tk-item-action .btn {
+    padding: 0;
+    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+    background: none;
+    border-radius: 0;
+    width: 100%;
+    height: 50%;
+    float: right;
+    transition: all .3s;
+}
+
+.tk-item-action .btn-set-current {
+    color: #1e7e34;
+    border-top-right-radius: 5px;
+}
+
+.tk-item-action .btn-remove {
+    color: #f6424a;
+    border-bottom-right-radius: 5px;
+}
+
+.tk-item-action .btn-remove:hover {
+    background-color: #f6424a;
+}
+
+.tk-item-action .btn-set-current:hover {
+    background-color: #1e7e34;
+}
+
+.tk-item-action .btn:hover i {
+    color: #fff;
+}
+
+.tk-item-action .btn i {
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.tk-item-info {
+    padding: 10px 10px 10px 15px;
+    position: relative;
+}
+
+.tk-item-info:hover .copy-text {
+    opacity: 1;
+}
+
+.tk-item-info p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    width: 100%;
+    font-size: 12px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.tk-item-info p {
+    margin-bottom: 5px;
+}
+
+.tk-item-info a {
+    display: inline;
+}
+
+.tk-item-info .copy-text {
+    color: #1e7e34;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 5px;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.copy-text i {
+    font-size: 14px;
+}
+
+#git-what,
+#git-why,
+#git-how,
+#git-impacted {
+    height: 80px;
+}
+
+#git-url {
+    border-radius: .25rem 0 0 .25rem;
+}
+
+#git-get-url {
+    width: 90px;
+    border-radius: 0 .25rem .25rem 0;
+    box-shadow: none;
+}
+
+#cw-message {
+    height: 150px;
+}
+
+#cw-message-preview {
+    overflow: auto;
+    max-height: 305px;
+    margin-bottom: 15px;
+    background: #fff;
+    box-shadow: 0px 0px 1px #0000001f !important;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#cw-message-preview::-webkit-scrollbar {
+    display: none;
+}
+
+.message-content {
+    font-size: 13px;
+    font-family: inherit;
+    margin-bottom: 10px;
+}
+
+.message-content:empty {
+    margin-bottom: 0;
+}
+
+.message-content br:first {
+    display: none;
+}
+
+.message-badge {
+    display: inline-flex;
+    border: 1px solid #66a300;
+    background: #66a300;
+    height: 18px;
+    border-radius: 2px;
+    margin-bottom: 1px;
+}
+
+.message-badge span {
+    font-weight: 700;
+    font-size: 10px;
+    margin-right: 2px;
+    color: #fff;
+    padding: 0 2px;
+    line-height: 18px;
+}
+
+.message-badge img {
+    width: 16px;
+    height: 16px;
+}
+
+.message-info {
+    background: #fff;
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    padding: 4px 8px;
+}
+
+.message-info .info-title {
+    display: flex;
+    align-items: center;
+    margin: -4px -8px 4px;
+    padding: 4px 8px;
+    background: #f2f2f2;
+    border-bottom: 1px solid #cccccc;
+    border-radius: 2px 2px 0 0;
+}
+
+.message-info p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-bottom: 0;
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+::placeholder {
+    color: #ced3dd !important;
+}
